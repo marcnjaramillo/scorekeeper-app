@@ -18,13 +18,24 @@ class Player extends Component {
   };
 
   render() {
+    let itemClassName = `item item--position-${this.props.player.rank}`;
+
     return (
-      <p key={this.props.player._id}>
-      {this.props.player.name} has {this.props.player.score} point(s).
-      <button onClick={this.onIncrement}>+1</button>
-      <button onClick={this.onDecrement}>-1</button>
-      <button onClick={this.onDelete}>X</button>
-    </p>
+      <div key={this.props.player._id} className={itemClassName}>
+        <div className="player">
+          <div>
+            <h3 className="player__name">{this.props.player.name}</h3>
+            <p className="player__stats">
+              {this.props.player.position} place: {this.props.player.score} point(s).          
+            </p>
+          </div>
+          <div className="player__actions">
+            <button className="button button--round" onClick={this.onDecrement}>-1</button>
+            <button className="button button--round" onClick={this.onIncrement}>+1</button>
+            <button className="button button--round" onClick={this.onDelete}>X</button>
+          </div>
+        </div>
+      </div>
     );
   }
 };

@@ -5,15 +5,17 @@ class TitleBar extends Component {
 
 renderSubtitle = () => {
   if (this.props.subtitle) {
-    <h3>{this.props.subtitle}</h3>
+    return <h3 className="titlebar__subtitle">{this.props.subtitle}</h3>
   }
 };
 
   render() {
     return (
-      <div>
-        <h1>{this.props.title}</h1>
-        {this.renderSubtitle()}
+      <div className="titlebar">
+        <div className="wrapper">
+          <h1>{this.props.title}</h1>
+          {this.renderSubtitle()}
+        </div>
       </div>
     )
   }

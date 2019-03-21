@@ -1,0 +1,43 @@
+// color variables
+$title-red: #E35557;
+$very-light-grey: #F2F2F2;
+$light-grey: #E8E8E8;
+$grey: #555555;
+$green: #E4EDE0;
+$green-alt: darken($green, 15%);
+$blue: #DFE7ED;
+$blue-alt: darken($blue, 15%);
+$red: #EDDFDF;
+$red-alt: darken($red, 15%);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: $very-light-grey;
+  color: $grey;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+}
+
+input, button, select {
+  font-size: 1.3rem;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 2.4rem;
+}
+
+@import './components/titlebar';
+@import './components/wrapper';
+@import './components/item';
+@import './components/button';
+@import './components/player';
+@import './components/form';
